@@ -92,6 +92,7 @@
             // 
             // buttonDelete
             // 
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDelete.Location = new System.Drawing.Point(656, 444);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(139, 23);

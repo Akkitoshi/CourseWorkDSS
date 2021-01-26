@@ -30,11 +30,13 @@
         {
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonAdd
             // 
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAdd.Location = new System.Drawing.Point(320, 48);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
@@ -49,23 +51,32 @@
             this.textBoxName.Size = new System.Drawing.Size(298, 20);
             this.textBoxName.TabIndex = 4;
             // 
-            // label1
+            // labelName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Наименование";
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(8, 12);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(83, 13);
+            this.labelName.TabIndex = 3;
+            this.labelName.Text = "Наименование";
+            // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.Location = new System.Drawing.Point(12, 48);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(0, 13);
+            this.labelError.TabIndex = 15;
             // 
             // AddComplexityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 77);
+            this.Controls.Add(this.labelError);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelName);
             this.Name = "AddComplexityForm";
             this.Text = "Добавить сложность";
             this.Load += new System.EventHandler(this.AddComplexityForm_Load);
@@ -78,6 +89,7 @@
 
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelError;
     }
 }
