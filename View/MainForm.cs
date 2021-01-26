@@ -2,12 +2,7 @@
 using Model.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
 
@@ -90,6 +85,42 @@ namespace View
         private void добавитьКатегориюToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<AddCategoryForm>();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
+
+        private void добавитьЗаявкуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<AddCategoryForm>();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
+
+        private void добавитьИсполнителяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<AddExecutorForm>();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
+
+        private void добавитьПриоритетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<AddPriorityForm>();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
+
+        private void добавитьСложностьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<AddComplexityForm>();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 LoadData();

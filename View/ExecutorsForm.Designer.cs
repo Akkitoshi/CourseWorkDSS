@@ -71,6 +71,7 @@
             this.добавитьИсполнителяToolStripMenuItem.Name = "добавитьИсполнителяToolStripMenuItem";
             this.добавитьИсполнителяToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.добавитьИсполнителяToolStripMenuItem.Text = "Добавить исполнителя";
+            this.добавитьИсполнителяToolStripMenuItem.Click += new System.EventHandler(this.добавитьИсполнителяToolStripMenuItem_Click);
             // 
             // label2
             // 

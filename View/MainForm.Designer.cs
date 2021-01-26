@@ -77,18 +77,21 @@
             this.добавитьЗаявкуToolStripMenuItem.Name = "добавитьЗаявкуToolStripMenuItem";
             this.добавитьЗаявкуToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.добавитьЗаявкуToolStripMenuItem.Text = "Добавить заявку";
+            this.добавитьЗаявкуToolStripMenuItem.Click += new System.EventHandler(this.добавитьЗаявкуToolStripMenuItem_Click);
             // 
             // добавитьИсполнителяToolStripMenuItem
             // 
             this.добавитьИсполнителяToolStripMenuItem.Name = "добавитьИсполнителяToolStripMenuItem";
             this.добавитьИсполнителяToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.добавитьИсполнителяToolStripMenuItem.Text = "Добавить исполнителя";
+            this.добавитьИсполнителяToolStripMenuItem.Click += new System.EventHandler(this.добавитьИсполнителяToolStripMenuItem_Click);
             // 
             // добавитьПриоритетToolStripMenuItem
             // 
             this.добавитьПриоритетToolStripMenuItem.Name = "добавитьПриоритетToolStripMenuItem";
             this.добавитьПриоритетToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.добавитьПриоритетToolStripMenuItem.Text = "Добавить приоритет";
+            this.добавитьПриоритетToolStripMenuItem.Click += new System.EventHandler(this.добавитьПриоритетToolStripMenuItem_Click);
             // 
             // добавитьКатегориюToolStripMenuItem
             // 
@@ -102,6 +105,7 @@
             this.добавитьСложностьToolStripMenuItem.Name = "добавитьСложностьToolStripMenuItem";
             this.добавитьСложностьToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.добавитьСложностьToolStripMenuItem.Text = "Добавить сложность";
+            this.добавитьСложностьToolStripMenuItem.Click += new System.EventHandler(this.добавитьСложностьToolStripMenuItem_Click);
             // 
             // спискиToolStripMenuItem
             // 

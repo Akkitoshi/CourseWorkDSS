@@ -71,6 +71,7 @@
             this.добавитьСложностьToolStripMenuItem.Name = "добавитьСложностьToolStripMenuItem";
             this.добавитьСложностьToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.добавитьСложностьToolStripMenuItem.Text = "Добавить сложность";
+            this.добавитьСложностьToolStripMenuItem.Click += new System.EventHandler(this.добавитьСложностьToolStripMenuItem_Click);
             // 
             // label2
             // 
