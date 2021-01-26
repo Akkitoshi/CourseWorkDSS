@@ -41,7 +41,7 @@ namespace View
                 });
 
                 labelError.ForeColor = Color.Green;
-                labelError.Text = "Клиент добавлен";
+                labelError.Text = "Категория добавлена";
                 buttonAdd.Enabled = false;
             }
             catch

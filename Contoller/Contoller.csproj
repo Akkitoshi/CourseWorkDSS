@@ -54,7 +54,7 @@
     <Compile Include="CategoryController.cs" />
     <Compile Include="ComplexityController.cs" />
     <Compile Include="ExecutorController.cs" />
-    <Compile Include="PriorityContoller.cs" />
+    <Compile Include="PriorityController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestController.cs" />
   </ItemGroup>

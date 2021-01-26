@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Contoller;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,24 +9,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unity;
 
 namespace View
 {
     public partial class AddRequestForm : Form
     {
-        public AddRequestForm()
+        [Dependency]
+        public new IUnityContainer Container { get; set; }
+        private readonly RequestController service;
+        public AddRequestForm(RequestController service)
         {
             InitializeComponent();
+            this.service = service;
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+       /* private void buttonAdd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBoxName.Text))
+            {
+                labelError.ForeColor = Color.Red;
+                labelError.Text = "Заполните поле наименование";
 
-        }
+            }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
+            try
+            {
+                service.AddElement(new Request
+                {
+                    Name = textBoxName.Text
+                });
 
-        }
+                labelError.ForeColor = Color.Green;
+                labelError.Text = "Категория добавлена";
+                buttonAdd.Enabled = false;
+            }
+            catch
+            {
+                labelError.ForeColor = Color.Red;
+                labelError.Text = "Ошибка";
+            }
+        }*/
     }
+
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.опцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьКатегориюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,15 +47,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(798, 397);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-2, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Список категорий";
             // 
             // menuStrip1
             // 
@@ -127,7 +117,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.textBoxDelId);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -145,7 +134,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem опцииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьКатегориюToolStripMenuItem;

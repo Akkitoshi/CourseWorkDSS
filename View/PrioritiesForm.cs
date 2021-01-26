@@ -14,19 +14,19 @@ using Unity;
 
 namespace View
 {
-    public partial class ComplexitiesForm : Form
+    public partial class PrioritiesForm : Form
     {
         [Dependency]
         public new IUnityContainer Container { get; set; }
-        private readonly ComplexityController service;
+        private readonly PriorityController service;
 
-        public ComplexitiesForm(ComplexityController service)
+        public PrioritiesForm(PriorityController service)
         {
             InitializeComponent();
             this.service = service;
         }
 
-        private void ComplexitiesForm_Load(object sender, EventArgs e)
+        private void PrioritiesForm_Load(object sender, EventArgs e)
         {
             LoadData();
         }
@@ -35,7 +35,7 @@ namespace View
         {
             try
             {
-                List<ComplexityView> list = service.GetList();
+                List<PriorityView> list = service.GetList();
                 if (list != null)
                 {
                     dataGridView1.DataSource = list;
@@ -54,9 +54,9 @@ namespace View
             }
         }
 
-        private void добавитьКатегориюToolStripMenuItem_Click(object sender, EventArgs e)
+        private void добавитьПриоритетToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<AddComplexityForm>();
+            var form = Container.Resolve<AddPriorityForm>();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 LoadData();

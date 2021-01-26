@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.опцииToolStripMenuItemOptions = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьЗаявкуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,22 +40,14 @@
             this.категорииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.приоритетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сложностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelError = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(798, 397);
-            this.dataGridView1.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -104,6 +95,7 @@
             this.добавитьКатегориюToolStripMenuItem.Name = "добавитьКатегориюToolStripMenuItem";
             this.добавитьКатегориюToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.добавитьКатегориюToolStripMenuItem.Text = "Добавить категорию";
+            this.добавитьКатегориюToolStripMenuItem.Click += new System.EventHandler(this.добавитьКатегориюToolStripMenuItem_Click);
             // 
             // добавитьСложностьToolStripMenuItem
             // 
@@ -125,8 +117,9 @@
             // исполнителиToolStripMenuItem
             // 
             this.исполнителиToolStripMenuItem.Name = "исполнителиToolStripMenuItem";
-            this.исполнителиToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.исполнителиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.исполнителиToolStripMenuItem.Text = "Исполнители";
+            this.исполнителиToolStripMenuItem.Click += new System.EventHandler(this.исполнителиToolStripMenuItem_Click);
             // 
             // категорииToolStripMenuItem
             // 
@@ -138,23 +131,16 @@
             // приоритетыToolStripMenuItem
             // 
             this.приоритетыToolStripMenuItem.Name = "приоритетыToolStripMenuItem";
-            this.приоритетыToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.приоритетыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.приоритетыToolStripMenuItem.Text = "Приоритеты";
+            this.приоритетыToolStripMenuItem.Click += new System.EventHandler(this.приоритетыToolStripMenuItem_Click);
             // 
             // сложностиToolStripMenuItem
             // 
             this.сложностиToolStripMenuItem.Name = "сложностиToolStripMenuItem";
-            this.сложностиToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.сложностиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сложностиToolStripMenuItem.Text = "Сложности";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Список заявок";
+            this.сложностиToolStripMenuItem.Click += new System.EventHandler(this.сложностиToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -190,33 +176,38 @@
             this.labelError.Size = new System.Drawing.Size(0, 13);
             this.labelError.TabIndex = 14;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 36);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(788, 411);
+            this.dataGridView1.TabIndex = 15;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 481);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Главная: Список заявок";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem опцииToolStripMenuItemOptions;
         private System.Windows.Forms.ToolStripMenuItem добавитьЗаявкуToolStripMenuItem;
@@ -229,10 +220,10 @@
         private System.Windows.Forms.ToolStripMenuItem категорииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem приоритетыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сложностиToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

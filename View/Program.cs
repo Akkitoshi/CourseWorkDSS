@@ -36,7 +36,7 @@ namespace View
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<CategoryController>(new
            HierarchicalLifetimeManager());
-            currentContainer.RegisterType<PriorityContoller>(new
+            currentContainer.RegisterType<PriorityController>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<ComplexityController>(new
            HierarchicalLifetimeManager());

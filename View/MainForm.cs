@@ -60,44 +60,40 @@ namespace View
             }
         }
 
-        /*  private void materialRaisedButtonAddService_Click(object sender, EventArgs e)
-          {
+        private void приоритетыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<PrioritiesForm>();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
 
-              var form = Container.Resolve<FormService>();
-              if (form.ShowDialog() == DialogResult.OK)
-              {
-                  LoadData();
-              }
-          }
+        private void сложностиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<ComplexitiesForm>();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
 
-          private void materialRaisedButtonDel_Click(object sender, EventArgs e)
-          {
-              labelError.ForeColor = Color.White;
-              if (materialSingleLineTextFieldId.Text.Length > 5)
-              {
-                  materialLabelError.ForeColor = Color.Red;
-                  labelError.Text = "Максимум символов 5";
-              }
-              if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldId.Text).Success)
-              {
-                  labelError.ForeColor = Color.Red;
-                  labelError.Text = "Не цифровое значение";
-              }
-              else
-              {
-                  try
-                  {
-                      service.delElement(Convert.ToInt32(materialSingleLineTextFieldId.Text));
-                      LoadData();
-                      labelError.ForeColor = Color.Green;
-                      labelError.Text = "Успешно";
-                  }
-                  catch
-                  {
-                      labelError.ForeColor = Color.Red;
-                      labelError.Text = "Ошибка";
-                  }
-              }
-          }*/
+        private void исполнителиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<ExecutorsForm>();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
+
+        private void добавитьКатегориюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = Container.Resolve<AddCategoryForm>();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                LoadData();
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class PrioretiesForm
+    partial class PrioritiesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.опцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьПриоритетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDelId = new System.Windows.Forms.TextBox();
+            this.labelError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -47,15 +47,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(798, 397);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-1, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Список  приоритетов";
             // 
             // menuStrip1
             // 
@@ -80,6 +71,7 @@
             this.добавитьПриоритетToolStripMenuItem.Name = "добавитьПриоритетToolStripMenuItem";
             this.добавитьПриоритетToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.добавитьПриоритетToolStripMenuItem.Text = "Добавить приоритет";
+            this.добавитьПриоритетToolStripMenuItem.Click += new System.EventHandler(this.добавитьПриоритетToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -99,28 +91,38 @@
             this.buttonDelete.TabIndex = 9;
             this.buttonDelete.Text = "Удалить приоритет";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // textBox1
+            // textBoxDelId
             // 
-            this.textBox1.Location = new System.Drawing.Point(363, 444);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBoxDelId.Location = new System.Drawing.Point(363, 444);
+            this.textBoxDelId.Name = "textBoxDelId";
+            this.textBoxDelId.Size = new System.Drawing.Size(287, 20);
+            this.textBoxDelId.TabIndex = 8;
             // 
-            // PrioretiesForm
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.Location = new System.Drawing.Point(12, 449);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(0, 13);
+            this.labelError.TabIndex = 16;
+            // 
+            // PrioritiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 476);
+            this.Controls.Add(this.labelError);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxDelId);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "PrioretiesForm";
+            this.Name = "PrioritiesForm";
             this.Text = "Список приоритетов";
+            this.Load += new System.EventHandler(this.PrioritiesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -132,12 +134,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem опцииToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьПриоритетToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDelId;
+        private System.Windows.Forms.Label labelError;
     }
 }

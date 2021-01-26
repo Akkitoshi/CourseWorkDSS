@@ -8,11 +8,11 @@ using Model.ViewModels;
 
 namespace Contoller
 {
-    public class PriorityContoller
+    public class PriorityController
     {
         private DBCourseWorkContext context;
 
-        public PriorityContoller(DBCourseWorkContext context)
+        public PriorityController(DBCourseWorkContext context)
         {
             this.context = context;
         }

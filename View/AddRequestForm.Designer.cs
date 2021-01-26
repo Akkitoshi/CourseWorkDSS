@@ -116,7 +116,6 @@
             this.labelExecutor.Size = new System.Drawing.Size(74, 13);
             this.labelExecutor.TabIndex = 28;
             this.labelExecutor.Text = "Исполнитель";
-            this.labelExecutor.Click += new System.EventHandler(this.label5_Click);
             // 
             // labelDSSExecutor
             // 

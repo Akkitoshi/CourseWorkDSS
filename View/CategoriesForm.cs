@@ -40,7 +40,9 @@ namespace View
                 {
                     dataGridView1.DataSource = list;
                     dataGridView1.Columns[0].Visible = true;
+                    dataGridView1.Columns[0].HeaderText = "Идентификатор";
                     dataGridView1.Columns[1].Visible = true;
+                    dataGridView1.Columns[1].HeaderText = "Наименование";
                     dataGridView1.Columns[1].AutoSizeMode =
                         DataGridViewAutoSizeColumnMode.Fill;
                 }
@@ -59,6 +61,7 @@ namespace View
             {
                 LoadData();
             }
+            LoadData();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -82,6 +85,7 @@ namespace View
                     LoadData();
                     labelError.ForeColor = Color.Green;
                     labelError.Text = "Успешно";
+                    textBoxDelId.Text = "";
                 }
                 catch
                 {
@@ -91,44 +95,5 @@ namespace View
             }
         }
 
-        /* private void materialRaisedButtonAddService_Click(object sender, EventArgs e)
-         {
-
-             var form = Container.Resolve<FormService>();
-             if (form.ShowDialog() == DialogResult.OK)
-             {
-                 LoadData();
-             }
-         }
-
-         private void materialRaisedButtonDel_Click(object sender, EventArgs e)
-         {
-             labelError.ForeColor = Color.White;
-             if (materialSingleLineTextFieldId.Text.Length > 5)
-             {
-                 materialLabelError.ForeColor = Color.Red;
-                 labelError.Text = "Максимум символов 5";
-             }
-             if (!(new Regex(@"[\d!#h]")).Match(materialSingleLineTextFieldId.Text).Success)
-             {
-                 labelError.ForeColor = Color.Red;
-                 labelError.Text = "Не цифровое значение";
-             }
-             else
-             {
-                 try
-                 {
-                     service.delElement(Convert.ToInt32(materialSingleLineTextFieldId.Text));
-                     LoadData();
-                     labelError.ForeColor = Color.Green;
-                     labelError.Text = "Успешно";
-                 }
-                 catch
-                 {
-                     labelError.ForeColor = Color.Red;
-                     labelError.Text = "Ошибка";
-                 }
-             }
-         }*/
     }
 }
