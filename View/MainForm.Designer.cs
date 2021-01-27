@@ -121,28 +121,28 @@
             // исполнителиToolStripMenuItem
             // 
             this.исполнителиToolStripMenuItem.Name = "исполнителиToolStripMenuItem";
-            this.исполнителиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.исполнителиToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.исполнителиToolStripMenuItem.Text = "Исполнители";
             this.исполнителиToolStripMenuItem.Click += new System.EventHandler(this.исполнителиToolStripMenuItem_Click);
             // 
             // категорииToolStripMenuItem
             // 
             this.категорииToolStripMenuItem.Name = "категорииToolStripMenuItem";
-            this.категорииToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.категорииToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.категорииToolStripMenuItem.Text = "Категории";
             this.категорииToolStripMenuItem.Click += new System.EventHandler(this.категорииToolStripMenuItem_Click);
             // 
             // приоритетыToolStripMenuItem
             // 
             this.приоритетыToolStripMenuItem.Name = "приоритетыToolStripMenuItem";
-            this.приоритетыToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.приоритетыToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.приоритетыToolStripMenuItem.Text = "Приоритеты";
             this.приоритетыToolStripMenuItem.Click += new System.EventHandler(this.приоритетыToolStripMenuItem_Click);
             // 
             // сложностиToolStripMenuItem
             // 
             this.сложностиToolStripMenuItem.Name = "сложностиToolStripMenuItem";
-            this.сложностиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сложностиToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.сложностиToolStripMenuItem.Text = "Сложности";
             this.сложностиToolStripMenuItem.Click += new System.EventHandler(this.сложностиToolStripMenuItem_Click);
             // 
@@ -164,6 +164,7 @@
             this.buttonDelete.TabIndex = 12;
             this.buttonDelete.Text = "Удалить заявку";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // textBox1
             // 

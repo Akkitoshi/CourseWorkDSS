@@ -99,5 +99,36 @@ namespace View
             }
             LoadData();
         }
+
+        private void buttonDelete_Click_1(object sender, EventArgs e)
+        {
+            labelError.ForeColor = Color.White;
+            if (textBoxDelId.Text.Length > 5)
+            {
+                labelError.ForeColor = Color.Red;
+                labelError.Text = "Максимум символов 5";
+            }
+            if (!(new Regex(@"[\d!#h]")).Match(textBoxDelId.Text).Success)
+            {
+                labelError.ForeColor = Color.Red;
+                labelError.Text = "Не цифровое значение";
+            }
+            else
+            {
+                try
+                {
+                    service.delElement(Convert.ToInt32(textBoxDelId.Text));
+                    LoadData();
+                    labelError.ForeColor = Color.Green;
+                    labelError.Text = "Успешно";
+                    textBoxDelId.Text = "";
+                }
+                catch
+                {
+                    labelError.ForeColor = Color.Red;
+                    labelError.Text = "Ошибка";
+                }
+            }
+        }
     }
 }

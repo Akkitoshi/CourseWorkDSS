@@ -21,6 +21,21 @@ namespace View
 
         }
 
+        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxComplexity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxPtiority_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         /* private void buttonAdd_Click(object sender, EventArgs e)
          {
              if (string.IsNullOrEmpty(textBoxName.Text))

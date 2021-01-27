@@ -56,6 +56,14 @@ namespace Contoller
                 }
             }
         }
+
+        public int searchId(string Name)
+        {
+            Category element = context.Categories.FirstOrDefault(rec => rec.Name ==
+                  Name);
+            
+            return element.Id;
+        }
         //удалить продукт
         public void delElement(int id)
         {

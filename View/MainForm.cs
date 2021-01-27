@@ -93,7 +93,7 @@ namespace View
 
         private void добавитьЗаявкуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = Container.Resolve<AddCategoryForm>();
+            var form = Container.Resolve<AddRequestForm>();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 LoadData();
@@ -125,6 +125,11 @@ namespace View
             {
                 LoadData();
             }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

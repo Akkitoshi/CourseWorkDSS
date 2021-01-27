@@ -91,6 +91,7 @@
             this.buttonDelete.TabIndex = 9;
             this.buttonDelete.Text = "Удалить исполнителя";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click_1);
             // 
             // textBoxDelId
             // 
@@ -121,6 +122,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ExecutorsForm";
             this.Text = "Список исполнителей";
+            this.Load += new System.EventHandler(this.ExecutorsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

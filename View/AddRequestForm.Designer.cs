@@ -139,6 +139,7 @@
             // 
             // comboBoxExecutor
             // 
+            this.comboBoxExecutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxExecutor.FormattingEnabled = true;
             this.comboBoxExecutor.Location = new System.Drawing.Point(94, 344);
             this.comboBoxExecutor.Name = "comboBoxExecutor";
@@ -147,27 +148,33 @@
             // 
             // comboBoxPtiority
             // 
+            this.comboBoxPtiority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPtiority.FormattingEnabled = true;
             this.comboBoxPtiority.Location = new System.Drawing.Point(94, 132);
             this.comboBoxPtiority.Name = "comboBoxPtiority";
             this.comboBoxPtiority.Size = new System.Drawing.Size(298, 21);
             this.comboBoxPtiority.TabIndex = 34;
+            this.comboBoxPtiority.SelectedIndexChanged += new System.EventHandler(this.comboBoxPtiority_SelectedIndexChanged);
             // 
             // comboBoxComplexity
             // 
+            this.comboBoxComplexity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxComplexity.FormattingEnabled = true;
             this.comboBoxComplexity.Location = new System.Drawing.Point(94, 93);
             this.comboBoxComplexity.Name = "comboBoxComplexity";
             this.comboBoxComplexity.Size = new System.Drawing.Size(298, 21);
             this.comboBoxComplexity.TabIndex = 35;
+            this.comboBoxComplexity.SelectedIndexChanged += new System.EventHandler(this.comboBoxComplexity_SelectedIndexChanged);
             // 
             // comboBoxCategory
             // 
+            this.comboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Location = new System.Drawing.Point(94, 54);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(298, 21);
             this.comboBoxCategory.TabIndex = 36;
+            this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategory_SelectedIndexChanged);
             // 
             // dataGridView1
             // 

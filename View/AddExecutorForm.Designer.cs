@@ -34,10 +34,10 @@
             this.labelCategory = new System.Windows.Forms.Label();
             this.textBoxExperience = new System.Windows.Forms.TextBox();
             this.labelExperience = new System.Windows.Forms.Label();
-            this.textBoxCodingLevel = new System.Windows.Forms.TextBox();
             this.labelCodingLevel = new System.Windows.Forms.Label();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.labelError = new System.Windows.Forms.Label();
+            this.comboBoxLevel = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonAdd
@@ -92,13 +92,6 @@
             this.labelExperience.TabIndex = 8;
             this.labelExperience.Text = "Опыт работы";
             // 
-            // textBoxCodingLevel
-            // 
-            this.textBoxCodingLevel.Location = new System.Drawing.Point(98, 133);
-            this.textBoxCodingLevel.Name = "textBoxCodingLevel";
-            this.textBoxCodingLevel.Size = new System.Drawing.Size(298, 20);
-            this.textBoxCodingLevel.TabIndex = 11;
-            // 
             // labelCodingLevel
             // 
             this.labelCodingLevel.AutoSize = true;
@@ -110,6 +103,7 @@
             // 
             // comboBoxCategory
             // 
+            this.comboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Location = new System.Drawing.Point(97, 49);
             this.comboBoxCategory.Name = "comboBoxCategory";
@@ -124,14 +118,27 @@
             this.labelError.Size = new System.Drawing.Size(0, 13);
             this.labelError.TabIndex = 35;
             // 
+            // comboBoxLevel
+            // 
+            this.comboBoxLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLevel.FormattingEnabled = true;
+            this.comboBoxLevel.Items.AddRange(new object[] {
+            "Junior",
+            "Middle",
+            "Senior"});
+            this.comboBoxLevel.Location = new System.Drawing.Point(97, 133);
+            this.comboBoxLevel.Name = "comboBoxLevel";
+            this.comboBoxLevel.Size = new System.Drawing.Size(298, 21);
+            this.comboBoxLevel.TabIndex = 36;
+            // 
             // AddExecutorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 191);
+            this.Controls.Add(this.comboBoxLevel);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.comboBoxCategory);
-            this.Controls.Add(this.textBoxCodingLevel);
             this.Controls.Add(this.labelCodingLevel);
             this.Controls.Add(this.textBoxExperience);
             this.Controls.Add(this.labelExperience);
@@ -154,9 +161,9 @@
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.TextBox textBoxExperience;
         private System.Windows.Forms.Label labelExperience;
-        private System.Windows.Forms.TextBox textBoxCodingLevel;
         private System.Windows.Forms.Label labelCodingLevel;
         private System.Windows.Forms.ComboBox comboBoxCategory;
         private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.ComboBox comboBoxLevel;
     }
 }
