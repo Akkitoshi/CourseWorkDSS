@@ -1,4 +1,4 @@
-﻿using Contoller;
+﻿using Controller;
 using Model.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -35,9 +35,7 @@ namespace View
                 {
                     dataGridView1.DataSource = list;
                     dataGridView1.Columns[0].Visible = true;
-                    dataGridView1.Columns[0].HeaderText = "Идентификатор";
                     dataGridView1.Columns[1].Visible = true;
-                    dataGridView1.Columns[1].HeaderText = "Наименование";
                     dataGridView1.Columns[1].AutoSizeMode =
                         DataGridViewAutoSizeColumnMode.Fill;
                 }
@@ -56,6 +54,7 @@ namespace View
             {
                 LoadData();
             }
+            LoadData();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

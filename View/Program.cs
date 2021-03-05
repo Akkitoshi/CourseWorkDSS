@@ -1,4 +1,4 @@
-﻿using Contoller;
+﻿using Controller;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -28,7 +28,7 @@ namespace View
         private static IUnityContainer BuildUnityContainer()
         {
             var currentContainer = new UnityContainer();
-            currentContainer.RegisterType<DbContext, DBCourseWorkContext>(new
+            currentContainer.RegisterType<DbContext, DSSContext>(new
            HierarchicalLifetimeManager());
             currentContainer.RegisterType<RequestController>(new
            HierarchicalLifetimeManager());

@@ -39,11 +39,12 @@
             this.labelDSSExecutor = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBoxExecutor = new System.Windows.Forms.ComboBox();
-            this.comboBoxPtiority = new System.Windows.Forms.ComboBox();
+            this.comboBoxPriority = new System.Windows.Forms.ComboBox();
             this.comboBoxComplexity = new System.Windows.Forms.ComboBox();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelError = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +112,7 @@
             // labelExecutor
             // 
             this.labelExecutor.AutoSize = true;
-            this.labelExecutor.Location = new System.Drawing.Point(12, 342);
+            this.labelExecutor.Location = new System.Drawing.Point(12, 367);
             this.labelExecutor.Name = "labelExecutor";
             this.labelExecutor.Size = new System.Drawing.Size(74, 13);
             this.labelExecutor.TabIndex = 28;
@@ -129,7 +130,7 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(748, 342);
+            this.button1.Location = new System.Drawing.Point(748, 367);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 32;
@@ -139,47 +140,41 @@
             // 
             // comboBoxExecutor
             // 
-            this.comboBoxExecutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxExecutor.FormattingEnabled = true;
-            this.comboBoxExecutor.Location = new System.Drawing.Point(94, 344);
+            this.comboBoxExecutor.Location = new System.Drawing.Point(94, 369);
             this.comboBoxExecutor.Name = "comboBoxExecutor";
             this.comboBoxExecutor.Size = new System.Drawing.Size(298, 21);
             this.comboBoxExecutor.TabIndex = 33;
             // 
-            // comboBoxPtiority
+            // comboBoxPriority
             // 
-            this.comboBoxPtiority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPtiority.FormattingEnabled = true;
-            this.comboBoxPtiority.Location = new System.Drawing.Point(94, 132);
-            this.comboBoxPtiority.Name = "comboBoxPtiority";
-            this.comboBoxPtiority.Size = new System.Drawing.Size(298, 21);
-            this.comboBoxPtiority.TabIndex = 34;
-            this.comboBoxPtiority.SelectedIndexChanged += new System.EventHandler(this.comboBoxPtiority_SelectedIndexChanged);
+            this.comboBoxPriority.FormattingEnabled = true;
+            this.comboBoxPriority.Location = new System.Drawing.Point(94, 132);
+            this.comboBoxPriority.Name = "comboBoxPriority";
+            this.comboBoxPriority.Size = new System.Drawing.Size(298, 21);
+            this.comboBoxPriority.TabIndex = 34;
             // 
             // comboBoxComplexity
             // 
-            this.comboBoxComplexity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxComplexity.BackColor = System.Drawing.SystemColors.Window;
             this.comboBoxComplexity.FormattingEnabled = true;
             this.comboBoxComplexity.Location = new System.Drawing.Point(94, 93);
             this.comboBoxComplexity.Name = "comboBoxComplexity";
             this.comboBoxComplexity.Size = new System.Drawing.Size(298, 21);
             this.comboBoxComplexity.TabIndex = 35;
-            this.comboBoxComplexity.SelectedIndexChanged += new System.EventHandler(this.comboBoxComplexity_SelectedIndexChanged);
             // 
             // comboBoxCategory
             // 
-            this.comboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Location = new System.Drawing.Point(94, 54);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(298, 21);
             this.comboBoxCategory.TabIndex = 36;
-            this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategory_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 177);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 202);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(811, 150);
             this.dataGridView1.TabIndex = 37;
@@ -187,21 +182,32 @@
             // labelError
             // 
             this.labelError.AutoSize = true;
-            this.labelError.Location = new System.Drawing.Point(398, 347);
+            this.labelError.Location = new System.Drawing.Point(398, 372);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(0, 13);
             this.labelError.TabIndex = 38;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 177);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 23);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "Поиск";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AddRequestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 375);
+            this.ClientSize = new System.Drawing.Size(835, 435);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.comboBoxComplexity);
-            this.Controls.Add(this.comboBoxPtiority);
+            this.Controls.Add(this.comboBoxPriority);
             this.Controls.Add(this.comboBoxExecutor);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelDSSExecutor);
@@ -233,10 +239,11 @@
         private System.Windows.Forms.Label labelDSSExecutor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBoxExecutor;
-        private System.Windows.Forms.ComboBox comboBoxPtiority;
+        private System.Windows.Forms.ComboBox comboBoxPriority;
         private System.Windows.Forms.ComboBox comboBoxComplexity;
         private System.Windows.Forms.ComboBox comboBoxCategory;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelError;
+        private System.Windows.Forms.Button button2;
     }
 }

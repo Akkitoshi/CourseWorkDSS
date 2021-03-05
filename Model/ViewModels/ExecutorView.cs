@@ -19,6 +19,7 @@ namespace Model.ViewModels
         public bool isBusy { get; set; }
         [DisplayName("Категория")]
 
-        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
+
     }
 }

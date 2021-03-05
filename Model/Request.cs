@@ -7,10 +7,6 @@ namespace Model
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-        public string Theme { get; set; }
-        [DataMember]
-        public string Description { get; set; }
-        [DataMember]
         public int CategoryId { get; set; }
         [DataMember]
         public int PriorityId { get; set; }
@@ -18,6 +14,11 @@ namespace Model
         public int ComplexityId { get; set; }
         [DataMember]
         public int ExecutorId { get; set; }
+        [DataMember]
+        public string Theme { get; set; }
+        [DataMember]
+        public string Description { get; set; }
+       
         public virtual Category Category { get; set; }
         public virtual Priority Priority { get; set; }
         public virtual Complexity Complexity { get; set; }

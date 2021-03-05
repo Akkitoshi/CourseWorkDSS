@@ -17,7 +17,7 @@ namespace Model
         [DataMember]
         public bool isBusy { get; set; }
         [DataMember]
-        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
 
         [ForeignKey("ExecutorId")]
         public virtual List<Request> Requests { get; set; }

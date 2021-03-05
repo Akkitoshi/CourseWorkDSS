@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{3612F6A5-8E47-4FFE-9DE5-80640CF29E7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoller", "Contoller\Contoller.csproj", "{B1D8E6CE-5E55-4C2C-8275-2B4E3B5E40D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Contoller\Controller.csproj", "{B1D8E6CE-5E55-4C2C-8275-2B4E3B5E40D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{8CDEEC7A-1C55-40AF-B274-14910E94BC91}"
 EndProject

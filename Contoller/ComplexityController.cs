@@ -4,16 +4,17 @@ using System.Linq;
 using Model;
 using Model.ViewModels;
 
-namespace Contoller
+namespace Controller
 {
     public class ComplexityController
     {
-        private DBCourseWorkContext context;
+        private DSSContext context;
 
-        public ComplexityController(DBCourseWorkContext context)
+        public ComplexityController(DSSContext context)
         {
             this.context = context;
         }
+
 
         // список всех товаров
         public List<ComplexityView> GetList()
@@ -27,6 +28,16 @@ namespace Contoller
             .ToList();
             return result;
         }
+
+        public int searchId(string Name)
+        {
+            Complexity element = context.Complexities.FirstOrDefault(rec => rec.Name ==
+                  Name);
+
+            return element.Id;
+        }
+
+
         // добавление нового товара
         public void AddElement(Complexity model)
         {
@@ -83,5 +94,7 @@ namespace Contoller
                 }
             }
         }
+
+       
     }
 }

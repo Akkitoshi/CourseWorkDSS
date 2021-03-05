@@ -1,4 +1,4 @@
-﻿using Contoller;
+﻿using Controller;
 using Model;
 using System;
 using System.Drawing;

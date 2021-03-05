@@ -2,9 +2,9 @@
 
 namespace Model
 {
-    public class DBCourseWorkContext : DbContext
+    public class DSSContext : DbContext
     {
-        public DBCourseWorkContext() : base("DBCourseWorkContext")
+        public DSSContext() : base("AppContext")
         {
             //настройки конфигурации для entity
             Configuration.ProxyCreationEnabled = false;

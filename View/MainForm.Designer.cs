@@ -42,7 +42,7 @@
             this.сложностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDelId = new System.Windows.Forms.TextBox();
             this.labelError = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
@@ -166,12 +166,12 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // textBox1
+            // textBoxDelId
             // 
-            this.textBox1.Location = new System.Drawing.Point(362, 453);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 20);
-            this.textBox1.TabIndex = 11;
+            this.textBoxDelId.Location = new System.Drawing.Point(362, 453);
+            this.textBoxDelId.Name = "textBoxDelId";
+            this.textBoxDelId.Size = new System.Drawing.Size(287, 20);
+            this.textBoxDelId.TabIndex = 11;
             // 
             // labelError
             // 
@@ -198,7 +198,7 @@
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxDelId);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
@@ -227,7 +227,7 @@
         private System.Windows.Forms.ToolStripMenuItem сложностиToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDelId;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.DataGridView dataGridView1;
     }

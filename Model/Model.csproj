@@ -52,10 +52,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppContext.cs" />
+    <Compile Include="DSSContext.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="Complexity.cs" />
     <Compile Include="Executor.cs" />
+    <Compile Include="Migrations\202101272100503_FirstMigrationDes.cs" />
+    <Compile Include="Migrations\202101272100503_FirstMigrationDes.designer.cs">
+      <DependentUpon>202101272100503_FirstMigrationDes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Priority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +73,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101272100503_FirstMigrationDes.resx">
+      <DependentUpon>202101272100503_FirstMigrationDes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

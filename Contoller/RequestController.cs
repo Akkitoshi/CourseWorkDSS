@@ -4,13 +4,13 @@ using System.Linq;
 using Model.ViewModels;
 using Model;
 
-namespace Contoller
+namespace Controller
 {
     public class RequestController
     {
-        private DBCourseWorkContext context;
+        private DSSContext context;
 
-        public RequestController(DBCourseWorkContext context)
+        public RequestController(DSSContext context)
         {
             this.context = context;
         }
@@ -25,9 +25,10 @@ namespace Contoller
                 Theme = rec.Theme,
                 CategoryId = rec.CategoryId,
                 PriorityId = rec.PriorityId,
-                ComplexityId = rec.Id,
-                ExecutorId = rec.Id
-    })
+                ComplexityId = rec.ComplexityId,
+                ExecutorId = rec.ExecutorId,
+                Description = rec.Description
+            })
             .ToList();
             return result;
         }
@@ -50,8 +51,9 @@ namespace Contoller
                         Theme = model.Theme,
                         CategoryId = model.CategoryId,
                         PriorityId = model.PriorityId,
-                        ComplexityId = model.Id,
-                        ExecutorId = model.Id
+                        ComplexityId = model.ComplexityId,
+                        ExecutorId = model.ExecutorId,
+                        Description = model.Description
                     };
                     context.Requests.Add(element);
                     context.SaveChanges();
@@ -64,6 +66,16 @@ namespace Contoller
                 }
             }
         }
+
+
+        public int searchId(int id)
+        {
+            Request element = context.Requests.FirstOrDefault(rec => rec.Id ==
+                  id);
+
+            return element.ExecutorId;
+        }
+
         //удалить продукт
         public void delElement(int id)
         {

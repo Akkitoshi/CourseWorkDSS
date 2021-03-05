@@ -1,4 +1,4 @@
-﻿using Contoller;
+﻿using Controller;
 using Model;
 using System;
 using System.Collections.Generic;
@@ -36,7 +36,7 @@ namespace View
                 {
                    
                     FIO = textBoxFIO.Text,
-                    CategoryId = categoryId,
+                    CategoryName = cName,
                     Experience = Convert.ToInt32(textBoxExperience.Text),
                     CodingLevel = comboBoxLevel.SelectedItem.ToString(),
                     isBusy = false

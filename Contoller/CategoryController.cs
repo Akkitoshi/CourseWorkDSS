@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Model.ViewModels;
 
-namespace Contoller
+namespace Controller
 {
     public class CategoryController
     {
-        private DBCourseWorkContext context;
+        private DSSContext context;
 
-        public CategoryController(DBCourseWorkContext context)
+        public CategoryController(DSSContext context)
         {
             this.context = context;
         }

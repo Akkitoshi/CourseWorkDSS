@@ -1,8 +1,9 @@
-﻿using Contoller;
+﻿using Controller;
 using Model.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Unity;
 
@@ -13,11 +14,13 @@ namespace View
         [Dependency]
         public new IUnityContainer Container { get; set; }
         private readonly RequestController service;
+        private readonly ExecutorController serviceExecutor;
 
-        public MainForm(RequestController service)
+        public MainForm(RequestController service, ExecutorController serviceE)
         {
             InitializeComponent();
             this.service = service;
+            this.serviceExecutor = serviceE;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -98,6 +101,7 @@ namespace View
             {
                 LoadData();
             }
+            LoadData();
         }
 
         private void добавитьИсполнителяToolStripMenuItem_Click(object sender, EventArgs e)
@@ -129,7 +133,33 @@ namespace View
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-
+            labelError.ForeColor = Color.White;
+            if (textBoxDelId.Text.Length > 5)
+            {
+                labelError.ForeColor = Color.Red;
+                labelError.Text = "Максимум символов 5";
+            }
+            if (!(new Regex(@"[\d!#h]")).Match(textBoxDelId.Text).Success)
+            {
+                labelError.ForeColor = Color.Red;
+                labelError.Text = "Не цифровое значение";
+            }
+            else
+            {
+                try
+                {
+                    service.delElement(Convert.ToInt32(textBoxDelId.Text));
+                    LoadData();
+                    labelError.ForeColor = Color.Green;
+                    labelError.Text = "Успешно";
+                    textBoxDelId.Text = "";
+                }
+                catch
+                {
+                    labelError.ForeColor = Color.Red;
+                    labelError.Text = "Ошибка";
+                }
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Contoller;
+﻿using Controller;
 using Model.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -61,6 +61,7 @@ namespace View
             {
                 LoadData();
             }
+            LoadData();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

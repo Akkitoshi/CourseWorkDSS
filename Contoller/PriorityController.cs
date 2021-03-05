@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Model.ViewModels;
 
-namespace Contoller
+namespace Controller
 {
     public class PriorityController
     {
-        private DBCourseWorkContext context;
+        private DSSContext context;
 
-        public PriorityController(DBCourseWorkContext context)
+        public PriorityController(DSSContext context)
         {
             this.context = context;
         }
@@ -82,6 +82,13 @@ namespace Contoller
                     throw;
                 }
             }
+        }
+        public int searchId(string Name)
+        {
+            Priority element = context.Priorities.FirstOrDefault(rec => rec.Name ==
+                  Name);
+
+            return element.Id;
         }
     }
 }
